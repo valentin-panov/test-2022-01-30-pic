@@ -1,0 +1,26 @@
+@import 'src/styles/common';
+
+.root {
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    flex-grow: 0;
+  }
+
+  .content {
+    flex: 1 1 auto;
+  }
+
+  .footer {
+    flex-grow: 0;
+  }
+}
+
+.bigImg {
+  width: 600px;
+  height: 600px;
+}

@@ -1,0 +1,20 @@
+
+$maxWidth            : 1920;
+
+$header-bg           : #4FB3EC;
+$footer-border       : rgba(229, 229, 229, 1);
+$footer-bg           : #119AD0;
+
+
+#root {
+  margin     : 0 auto;
+  min-height : 100%;
+  font       : inherit;
+}
+
+html,
+body {
+  box-sizing  : border-box;
+  height      : 100%;
+  font-family : 'Roboto', sans-serif;
+}

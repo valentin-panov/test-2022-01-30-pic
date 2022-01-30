@@ -1,0 +1,23 @@
+#root {
+  margin: 0 auto;
+  min-height: 100%;
+  font: inherit;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=Album.module.css.map */

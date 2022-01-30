@@ -1,0 +1,14 @@
+@import 'src/styles/common';
+
+.root {
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+  box-sizing: border-box;
+  flex-direction: column;
+  color: #ffffff;
+  background: $footer-bg;
+}
