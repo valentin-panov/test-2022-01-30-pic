@@ -1,8 +1,8 @@
 # Тестовое задание
 
-[![Build status](https://ci.appveyor.com/api/projects/status/lxs27ccbjknr3ptp?svg=true)](https://ci.appveyor.com/project/vapanov/test-2022-01-30-pic)
+[![Build status](https://ci.appveyor.com/api/projects/status/lxs27ccbjknr3ptp?svg=true)](https://ci.appveyor.com/project/vapanov/test-2022-01-30-02-pic)
 
-WEB VERSION https://valentin-panov.github.io/test-2022-01-30-pic/
+WEB VERSION https://valentin-panov.github.io/test-2022-01-30-02-pic/
 
 ### Краткое описание задачи
 

@@ -17,6 +17,12 @@
 
   .footer {
     flex-grow: 0;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    .removeBtn {
+      height: 20px;
+    }
   }
 }
 

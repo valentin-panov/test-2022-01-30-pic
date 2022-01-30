@@ -4,16 +4,15 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Interfaces
-import { InAlbums, InPicture } from '../interfaces/Interfaces';
+import { InPicture, InPictures } from '../interfaces/Interfaces';
 
 // Server
 import { serverURL } from '../App';
-import { splitResponse } from '../utils/splitResponse';
 
-const initialState: InAlbums = {
+const initialState: InPictures = {
   status: 'idle',
   error: '',
-  albums: [],
+  pictures: [],
 };
 
 export const picturesFetchData = createAsyncThunk('pictures/FetchingData', async () => {
@@ -30,13 +29,8 @@ export const picturesSlice = createSlice({
   initialState,
   reducers: {
     pictureRemove: (state, action: PayloadAction<InPicture>) => {
-      const { albumId, id } = action.payload;
-      state.albums = state.albums.map((d) => {
-        if (d.albumId === albumId) {
-          return { ...d, pictures: d.pictures.filter((entry) => entry.id !== id) };
-        }
-        return d;
-      });
+      const { id } = action.payload;
+      state.pictures = state.pictures.filter((entry) => entry.id !== id);
     },
   },
   extraReducers: (builder) => {
@@ -45,7 +39,7 @@ export const picturesSlice = createSlice({
       state.error = '';
     });
     builder.addCase(picturesFetchData.fulfilled, (state, action: PayloadAction<InPicture[]>) => {
-      state.albums = splitResponse(action.payload);
+      state.pictures = [...action.payload];
       state.status = 'success';
     });
     builder.addCase(picturesFetchData.rejected, (state, action) => {

@@ -18,7 +18,7 @@ export const CardElement = memo<Props>(({ className, element }) => {
   const handleOpen = (): void => setOpen(true);
   const handleClose = (): void => setOpen(false);
 
-  const { title, url, thumbnailUrl } = element;
+  const { albumId, id, title, url, thumbnailUrl } = element;
 
   const removeElement = (forRemove: InPicture): void => {
     dispatch(pictureRemove(forRemove));
@@ -45,11 +45,17 @@ export const CardElement = memo<Props>(({ className, element }) => {
         </Button>
         <CardContent className={s.content}>
           <Typography variant="body2" color="text.secondary">
-            {title}
+            Album ID: {albumId}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Picture ID: {id}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Title: {title}
           </Typography>
         </CardContent>
         <CardActions className={s.footer}>
-          <Button size="small" onClick={() => removeElement(element)}>
+          <Button size="small" onClick={() => removeElement(element)} className={s.removeBtn}>
             REMOVE CARD
           </Button>
         </CardActions>

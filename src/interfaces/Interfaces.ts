@@ -11,11 +11,6 @@ export interface InPicture {
   thumbnailUrl: string;
 }
 
-export interface InAlbum {
-  albumId: number;
+export interface InPictures extends Status {
   pictures: InPicture[];
-}
-
-export interface InAlbums extends Status {
-  albums: InAlbum[];
 }
