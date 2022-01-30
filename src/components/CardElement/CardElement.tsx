@@ -40,7 +40,9 @@ export const CardElement = memo<Props>(({ className, element }) => {
   return (
     <>
       <Card className={cn(s.root, className)}>
-        <CardMedia component="img" height="140" image={thumbnailUrl} alt={title} className={s.header} />
+        <Button onClick={handleOpen}>
+          <CardMedia component="img" height="140" image={thumbnailUrl} alt={title} className={s.header} />
+        </Button>
         <CardContent className={s.content}>
           <Typography variant="body2" color="text.secondary">
             {title}
@@ -49,9 +51,6 @@ export const CardElement = memo<Props>(({ className, element }) => {
         <CardActions className={s.footer}>
           <Button size="small" onClick={() => removeElement(element)}>
             REMOVE CARD
-          </Button>
-          <Button size="small" onClick={handleOpen}>
-            SHOW BIG
           </Button>
         </CardActions>
       </Card>
